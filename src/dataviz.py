@@ -1,9 +1,7 @@
 import os
 import matplotlib as mpl
-mpl.use("TkAgg")
 from matplotlib.animation import FuncAnimation
 from random import random
-
 import time
 import numpy as np
 
