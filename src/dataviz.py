@@ -15,7 +15,6 @@ from matplotlib import pyplot as plt
 plt.style.use("ggplot")
 fig = plt.figure()
 
-
 class DataViz:
     def __init__(self, world, agents):
         ox, oy = [], []
@@ -27,11 +26,7 @@ class DataViz:
                     oy.append(y)
         
         plt.plot(ox, oy, "ok")
-        
-
         self.agents_colors = dict()
-
-
         for agent in agents:
             self.agents_colors[agent.id] = [random(), random(), random()]
 
@@ -49,7 +44,6 @@ class DataViz:
             )
 
         plt.grid(True)
-
 
     def plot_paths(self, paths):
         
