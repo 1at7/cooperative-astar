@@ -8,16 +8,15 @@ import time
 import numpy as np
 
 
-#if "DISPLAY" not in os.environ:
-#    mpl.use("agg")
-#else:
-#    mpl.use("TkAgg")
+if "DISPLAY" not in os.environ:
+    mpl.use("agg")
+else:
+    mpl.use("TkAgg")
 from matplotlib import pyplot as plt
 
 plt.style.use("ggplot")
 fig = plt.figure()
-#ax = fig.add_subplot(1, 1, 1)
-#line, = fig.plot([],[])
+
 
 class DataViz:
     def __init__(self, world, agents):
@@ -96,7 +95,6 @@ class DataViz:
                 it[a] += 1
             if len(agents) == 0:
                 break
-        #anim = FuncAnimation(fig, animation)
         
         plt.show()
         plt.close()
